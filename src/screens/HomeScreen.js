@@ -15,7 +15,7 @@ const HomeScreen =({navigation}) =>{
 
     useLayoutEffect(() => {
         navigation.setOptions({
-          headerRight: () => <HamburgerIcon click={hamburgerClicked}/>,
+          headerRight: () => <HamburgerIcon navigation={navigation}/>,
         });
       }, [navigation]);
 

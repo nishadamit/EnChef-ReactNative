@@ -6,9 +6,9 @@ import {
     responsiveFontSize
   } from "react-native-responsive-dimensions";
 
-  const HumburgerIcon = (props) =>{
+  const HumburgerIcon = ({navigation}) =>{
        return(
-        <TouchableOpacity onPress={props.click} >
+        <TouchableOpacity onPress={() =>navigation.toggleDrawer()} >
             <View style={styles.container}>
                 <Image
                     style={{ width: '100%', height: '100%' }}
