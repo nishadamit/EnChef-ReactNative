@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, SafeAreaView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { BottomNavigator } from './Bottom'
-import Profile from '../screens/Drawer/Profile';
-import Order from '../screens/Drawer/Order';
+import{ ProfileStack }from './Stack/ProfileStack';
+import{ OrderStack }from './Stack/OrderStack';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -15,9 +14,27 @@ const Drawer = createDrawerNavigator();
                    initialRouteName="home"
                    drawerPosition="right"
                 >
-                        <Drawer.Screen name="home" component={BottomNavigator} />
-                        <Drawer.Screen name="profile" component={Profile} />
-                        <Drawer.Screen name="order" component={Order} />
+                        <Drawer.Screen 
+                             name="home" 
+                             component={BottomNavigator}
+                             options={{
+                                title:"HOME"
+                             }}
+                        />
+                        <Drawer.Screen 
+                             name="profile" 
+                             component={ProfileStack} 
+                             options={{
+                                title:"PROFILE"
+                            }}
+                        />
+                        <Drawer.Screen 
+                             name="order" 
+                             component={OrderStack}
+                             options={{
+                                title:"ORDER"
+                            }} 
+                        />
                 </Drawer.Navigator>
 		  
         )

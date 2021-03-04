@@ -5,13 +5,9 @@ import {
     responsiveWidth,
     responsiveFontSize
   } from "react-native-responsive-dimensions";
-  import HamburgerIcon from '../components/HumberIcon';
+import HamburgerIcon from '../components/HumberIcon';
 
 const HomeScreen =({navigation}) =>{
-
-    const hamburgerClicked =() =>{
-          alert("Hamburger clicked")
-    }
 
     useLayoutEffect(() => {
         navigation.setOptions({
