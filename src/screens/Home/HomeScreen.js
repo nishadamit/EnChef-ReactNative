@@ -1,11 +1,19 @@
 import React,{useState,useLayoutEffect} from 'react';
-import { View,Text,StyleSheet,Button, TouchableOpacity } from 'react-native';
+import { 
+    View,
+    Text,
+    StyleSheet,
+    Button, 
+    TouchableOpacity,
+    SafeAreaView,
+    StatusBar
+ } from 'react-native';
 import {
     responsiveHeight,
     responsiveWidth,
     responsiveFontSize
   } from "react-native-responsive-dimensions";
-import HamburgerIcon from '../components/HumberIcon';
+import HamburgerIcon from '../../components/HumberIcon';
 
 const HomeScreen =({navigation}) =>{
 
@@ -17,7 +25,8 @@ const HomeScreen =({navigation}) =>{
 
 
     return(
-        <View style={styles.Container}>
+        <SafeAreaView style={styles.Container}>
+            <StatusBar barStyle="dark-content" backgroundColor="#6495ed" />
             <Text style={{fontSize:responsiveFontSize(4)}} >This is HomeScreen</Text>
             <TouchableOpacity onPress={() =>navigation.navigate('detail')}>
                 <View style={styles.ButtonStyle}>
@@ -29,7 +38,7 @@ const HomeScreen =({navigation}) =>{
                     <Text style={styles.textStyle}>TabNavigation</Text>
                 </View>
             </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     )
 
     // return <Text>Count: {count}</Text>;

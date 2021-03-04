@@ -7,6 +7,9 @@ import {
   } from "react-native-responsive-dimensions";
 
   const HumburgerIcon = ({navigation}) =>{
+
+    //    console.log("naviagation in humberger icon",navigation)
+
        return(
         <TouchableOpacity onPress={() =>navigation.toggleDrawer()} >
             <View style={styles.container}>

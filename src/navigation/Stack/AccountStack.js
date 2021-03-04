@@ -3,9 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Account from '../../screens/Bottom/Account';
 
-import CompanyLogo from '../../components/Companylogo';
-import HamburgerIcon from '../../components/HumberIcon';
-
 const Stack = createStackNavigator();
 
 export const AccountStack = () =>{
@@ -25,10 +22,6 @@ export const AccountStack = () =>{
                 <Stack.Screen 
                     name="account"
                     component={Account} 
-                    options={{ 
-                        headerTitle: (props) => <CompanyLogo {...props} />,
-                        headerRight: () => <HamburgerIcon/>
-                        }}
                 />
         </Stack.Navigator>
      )

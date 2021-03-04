@@ -1,9 +1,9 @@
 import React from 'react';
+import { View, Text, StyleSheet, Button, SafeAreaView } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { BottomNavigator } from './Bottom'
 import{ ProfileStack }from './Stack/ProfileStack';
 import{ OrderStack }from './Stack/OrderStack';
-
 
 const Drawer = createDrawerNavigator();
 

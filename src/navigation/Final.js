@@ -1,15 +1,17 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { DrawerActions } from '@react-navigation/native';
+
+import CompanyLogo from '../components/Companylogo';
+import HamburgerIcon from '../components/HumberIcon';
+import { Drawer1 } from './Drawer';
+
 const Stack = createStackNavigator();
 
-import Order from '../../screens/Drawer/Order';
-
-import CompanyLogo from '../../components/Companylogo';
-
-export const OrderStack = ({navigation}) =>{
+export const Final = () =>{
      return(
         <Stack.Navigator
-        screenOptions={{
+            screenOptions={{
             headerStyle:{
                 backgroundColor:'#6495ed',
             },
@@ -18,13 +20,14 @@ export const OrderStack = ({navigation}) =>{
                 fontWeight:'bold'
             }
             }}
-            initialRouteName='order'
-        >
+            initialRouteName='final'
+       >
                 <Stack.Screen 
-                    name="order"
-                    component={Order}
+                    name="final"
+                    component={Drawer1} 
                     options={{ 
                         headerTitle: (props) => <CompanyLogo {...props} />,
+                        headerRight: (props) => <HamburgerIcon navigation={props}/>
                         }}
                 />
         </Stack.Navigator>
