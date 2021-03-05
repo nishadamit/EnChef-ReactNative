@@ -5,9 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../../screens/Home/HomeScreen';
 import DetailScreen from '../../screens/Home/DetailsScreen';
 import TabNavScreen from '../../screens/Home/TabNav';
+import BackPrevention from '../../screens/Home/BackPrevention';
 
 import CompanyLogo from '../../components/Companylogo';
 import HamburgerIcon from '../../components/HumberIcon';
+
 
 const Stack = createStackNavigator();
 
@@ -30,6 +32,13 @@ export const HomeStack = () =>{
                     component={HomeScreen} 
                     options={{ 
                         headerTitle: (props) => <CompanyLogo {...props} />,
+                        }}
+                />
+                <Stack.Screen 
+                    name="backprevent" 
+                    component={BackPrevention} 
+                    options={{
+                        title:"Detail",
                         }}
                 />
                 <Stack.Screen 

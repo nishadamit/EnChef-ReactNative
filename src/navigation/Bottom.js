@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { HomeStack } from './Stack/HomeStack';
 import { AccountStack } from './Stack/AccountStack';
+import { HelpStack } from './Stack/HelpStack';
+import { CartStack} from './Stack/CartStack';
 import Cart from '../screens/Bottom/Cart';
 import Help from '../screens/Bottom/Help';
 
@@ -45,14 +47,14 @@ export const BottomNavigator = () =>{
                 />
                  <Tab.Screen 
                      name="cart" 
-                     component={Cart} 
+                     component={CartStack} 
                      options={{
                         title:"CART",
                      }}
                 />
                  <Tab.Screen 
                      name="help" 
-                     component={Help} 
+                     component={HelpStack} 
                      options={{
                         title:"HELP"
                      }}

@@ -1,11 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Account from '../../screens/Bottom/Account';
+import Cart from '../../screens/Bottom/Cart';
 
 const Stack = createStackNavigator();
 
-export const AccountStack = () =>{
+export const CartStack = () =>{
      return(
         <Stack.Navigator
             screenOptions={{
@@ -17,13 +17,13 @@ export const AccountStack = () =>{
                 fontWeight:'bold'
             }
             }}
-            initialRouteName='account'
+            initialRouteName='cart'
        >
                 <Stack.Screen 
-                    name="account"
-                    component={Account}
+                    name="cart"
+                    component={Cart}
                     options={{
-                        headerTitle:'Account'
+                        headerTitle:'Cart'
                     }}
                 />
         </Stack.Navigator>

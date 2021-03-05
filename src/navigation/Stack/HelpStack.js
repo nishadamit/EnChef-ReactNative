@@ -1,11 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Account from '../../screens/Bottom/Account';
+import Help from '../../screens/Bottom/Help';
 
 const Stack = createStackNavigator();
 
-export const AccountStack = () =>{
+export const HelpStack = () =>{
      return(
         <Stack.Navigator
             screenOptions={{
@@ -20,10 +20,10 @@ export const AccountStack = () =>{
             initialRouteName='account'
        >
                 <Stack.Screen 
-                    name="account"
-                    component={Account}
+                    name="help"
+                    component={Help} 
                     options={{
-                        headerTitle:'Account'
+                        headerTitle:"Help"
                     }}
                 />
         </Stack.Navigator>

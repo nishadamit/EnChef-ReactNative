@@ -38,6 +38,11 @@ const HomeScreen =({navigation}) =>{
                     <Text style={styles.textStyle}>TabNavigation</Text>
                 </View>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() =>navigation.navigate('backprevent')}>
+                <View style={styles.ButtonStyle}>
+                    <Text style={styles.textStyle}>Back Preventation</Text>
+                </View>
+            </TouchableOpacity>
         </SafeAreaView>
     )
 
