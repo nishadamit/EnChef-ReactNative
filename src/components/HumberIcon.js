@@ -6,13 +6,12 @@ import {
     responsiveFontSize
   } from "react-native-responsive-dimensions";
 
-  import { useNavigation } from '@react-navigation/native';
+import * as RootNavigation from '../navigation/RootNavigation';
+  
 
-  const HumburgerIcon = () =>{
+//   console.log("root Navigation",RootNavigation)
 
-       const navigation = useNavigation();
-
-       console.log("naviagation in humberger icon",navigation)
+  const HumburgerIcon = ({navigation}) =>{
 
        return(
         <TouchableOpacity onPress={() =>navigation.toggleDrawer()} >

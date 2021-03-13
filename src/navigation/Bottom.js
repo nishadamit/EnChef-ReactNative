@@ -5,8 +5,6 @@ import { HomeStack } from './Stack/HomeStack';
 import { AccountStack } from './Stack/AccountStack';
 import { HelpStack } from './Stack/HelpStack';
 import { CartStack} from './Stack/CartStack';
-import Cart from '../screens/Bottom/Cart';
-import Help from '../screens/Bottom/Help';
 
 const Tab = createBottomTabNavigator();
 

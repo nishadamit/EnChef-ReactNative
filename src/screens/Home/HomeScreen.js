@@ -15,7 +15,15 @@ import {
   } from "react-native-responsive-dimensions";
 import HamburgerIcon from '../../components/HumberIcon';
 
-const HomeScreen =({navigation}) =>{
+import { navigationRef } from '../../navigation/RootNavigation'
+
+const HomeScreen =({navigation,route}) =>{
+    
+    setTimeout(() =>console.log("navigation ref in homescreen",navigationRef.current.getRootState()),3000)
+    // console.log("getCurrentRoute",navigationRef.current.getCurrentRoute())
+    // console.log("getCurrentOptions",navigationRef.current.getCurrentOptions())
+    // console.log("route prop inside home screen",route)
+    // console.log("navigation prop inside home screen",navigation)
 
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -28,7 +36,7 @@ const HomeScreen =({navigation}) =>{
         <SafeAreaView style={styles.Container}>
             <StatusBar barStyle="dark-content" backgroundColor="#6495ed" />
             <Text style={{fontSize:responsiveFontSize(4)}} >This is HomeScreen</Text>
-            <TouchableOpacity onPress={() =>navigation.navigate('detail')}>
+            <TouchableOpacity onPress={() =>navigationRef.current.navigate('detail')}>
                 <View style={styles.ButtonStyle}>
                     <Text style={styles.textStyle}>Go To Details</Text>
                 </View>

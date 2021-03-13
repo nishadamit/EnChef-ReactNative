@@ -7,9 +7,15 @@ import {
     responsiveFontSize
   } from "react-native-responsive-dimensions";
 
+  import { navigationRef } from '../../navigation/RootNavigation'
+
 const DetailScreen  = ({navigation}) =>{
 
     const [count, setCount] = useState(0);
+
+    
+
+    console.log("navigation ref in detailscreen",navigationRef.current.getRootState())
 
     useLayoutEffect(() => {
          navigation.setOptions({
